@@ -6,8 +6,6 @@ authors = ["Hasanat Kazmi <hasanatkazmi@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-asyncio = "^3.4.3"
-aiohttp = "^3.6.2"
 
 [tool.poetry.dev-dependencies]
 
