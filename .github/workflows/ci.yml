@@ -32,3 +32,7 @@ jobs:
       run: poetry run pytest tests/
     - name: Build Artifacts
       run: poetry build
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@master
+      with:
+        path: dist/*
