@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "kv"
+name = "dkv-kv"
 version = "0.1.0"
 description = ""
 authors = ["Hasanat Kazmi <hasanatkazmi@gmail.com>"]
