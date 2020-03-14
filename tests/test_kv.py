@@ -1,5 +1,5 @@
 
-from kv.kv import say_hello
+from dkv_kv.kv import say_hello
 
 
 def test_say_hello():
