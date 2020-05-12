@@ -10,8 +10,11 @@ curl https://pyenv.run | bash
 export PATH="/var/lib/jenkins/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"'''
-        sh 'pyenv install 3.8.0 && pyevn global 3.8.0'
-        sh 'curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python'
+        sh '''/var/lib/jenkins/.pyenv/bin/pyenv install 3.8.0
+/var/lib/jenkins/.pyenv/bin/pyevn global 3.8.0'''
+        sh 'python --version'
+        sh '''
+curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python'''
       }
     }
     stage('poetry dependencies install') {
