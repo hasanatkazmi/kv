@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('set python and install poetry') {
       steps {
-        sh 'pyevn global 3.8.0'
+        sh '/root/.pyenv/libexec/pyevn global 3.8.0'
         sh 'python --version'
         sh '''
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python'''
