@@ -3,7 +3,11 @@ pipeline {
   stages {
     stage('install toolchain') {
       steps {
-        sh 'curl https://pyenv.run | bash'
+        sh '''curl https://pyenv.run | bash
+
+export PATH="/var/lib/jenkins/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"'''
         sh 'pyenv install 3.8.0 && pyevn global 3.8.0'
         sh 'curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python'
       }
