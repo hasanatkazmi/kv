@@ -3,7 +3,9 @@ pipeline {
   stages {
     stage('install toolchain') {
       steps {
-        sh '''curl https://pyenv.run | bash
+        sh '''rm -rf /var/lib/jenkins/.pyenv
+
+curl https://pyenv.run | bash
 
 export PATH="/var/lib/jenkins/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
